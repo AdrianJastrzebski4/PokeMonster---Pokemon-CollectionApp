@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makieta – Kolekcje</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="row">
+    <div><strong>PokeMonster Market</strong> <span class="badge">Makieta</span></div>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="karty.html">Karty</a>
+      <a href="ogloszenia.html">Ogłoszenia</a>
+      <a href="kolekcje.html">Kolekcje</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h2>Kolekcje</h2>
+    <p class="small">
+      Tabela + dodatkowe pola (ocena, daty, cena).
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Dodaj / Edytuj wpis w kolekcji</h3>
+    <form>
+      <div class="row">
+        <div>
+          <label>Użytkownik</label><br/>
+          <select>
+            <option>-- wybierz użytkownika --</option>
+            <option>Jan Kowalski (id=1)</option>
+            <option>Ala Nowak (id=2)</option>
+          </select>
+        </div>
+        <div>
+          <label>Karta</label><br/>
+          <select>
+            <option>-- wybierz kartę --</option>
+            <option>Pikachu (#25) (id=1)</option>
+            <option>Charizard (#6) (id=2)</option>
+          </select>
+        </div>
+        <div>
+          <label>ocena_karty (1–10)</label><br/>
+          <input type="number" placeholder="np. 8" />
+        </div>
+        <div>
+          <label>cena (opcjonalnie)</label><br/>
+          <input type="number" step="0.01" placeholder="np. 49.99" />
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:10px;">
+        <div>
+          <label>wyslana_do_oceny</label><br/>
+          <input placeholder="YYYY-MM-DD" />
+        </div>
+        <div>
+          <label>odeslana_z_oceny</label><br/>
+          <input placeholder="YYYY-MM-DD" />
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:10px;">
+        <button type="button">Zapisz</button>
+        <button type="button">Anuluj</button>
+      </div>
+
+      <p class="small"><span class="badge">Uprawnienia</span> USER nie edytuje cudzych wpisów.</p>
+    </form>
+  </div>
+
+  <div class="card">
+    <h3>Lista wpisów w kolekcjach</h3>
+
+    <div class="row" style="margin:10px 0;">
+      <button type="button">Poprzednia</button>
+      <div class="small">Strona 1 z 2</div>
+      <button type="button">Następna</button>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th><th>Użytkownik</th><th>Karta</th><th>Ocena</th><th>Cena</th><th>Akcje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>Jan Kowalski</td><td>Pikachu</td><td>8</td><td>49.99</td>
+          <td class="actions">
+            <button>Szczegóły</button>
+            <button>Edytuj</button>
+            <button class="danger">Usuń</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr/>
+    <h4>Szczegóły wpisu (widok szczegółowy)</h4>
+    <p class="small">W aplikacji: wszystkie kolumny + relacje + powiązane ogłoszenia.</p>
+    <pre class="small">
+{
+  "id": 1,
+  "uzytkownicy": {"id": 1, "imie": "Jan", "nazwisko": "Kowalski"},
+  "karta": {"id": 1, "nazwa_kart": "Pikachu", "numer_kart": 25},
+  "ocena_karty": 8,
+  "wyslana_do_oceny": "2025-01-10",
+  "odeslana_z_oceny": "2025-01-20",
+  "cena": 49.99,
+  "ogloszenia": [
+    {"id": 1, "typ": "SPRZEDAZ", "status": "AKTYWNE", "cena": 55.00}
+  ]
+}
+    </pre>
+  </div>
+</main>
+</body>
+</html>

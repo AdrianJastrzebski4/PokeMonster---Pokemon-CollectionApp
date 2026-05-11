@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makieta – Login / Rejestracja</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="row">
+    <div><strong>PokeMonster Market</strong> <span class="badge">Makieta</span></div>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="karty.html">Karty</a>
+      <a href="ogloszenia.html">Ogłoszenia</a>
+      <a href="kolekcje.html">Kolekcje</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h2>Logowanie</h2>
+    <form>
+      <div class="row">
+        <div>
+          <label>Email</label><br/>
+          <input type="email" placeholder="np. jan@example.com" />
+        </div>
+        <div>
+          <label>Hasło</label><br/>
+          <input type="password" placeholder="********" />
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <button type="button">Zaloguj</button>
+        <button type="button">Przejdź do rejestracji</button>
+      </div>
+      <p class="small">Po zalogowaniu w aplikacji użytkownik</p>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Rejestracja</h2>
+    <form>
+      <div class="row">
+        <div>
+          <label>Imię</label><br/>
+          <input type="text" placeholder="Adrian" />
+        </div>
+        <div>
+          <label>Nazwisko</label><br/>
+          <input type="text" placeholder="Jastrzębski" />
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <div>
+          <label>Email</label><br/>
+          <input type="email" placeholder="adrian@example.com" />
+        </div>
+        <div>
+          <label>Hasło</label><br/>
+          <input type="password" placeholder="min. 6 znaków" />
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <button type="button">Załóż konto</button>
+      </div>
+      <p class="small">W aplikacji rejestracja tworzy rekord w tabeli <code>uzytkownicy</code> z rolą USER.</p>
+    </form>
+  </div>
+</main>
+</body>
+</html>
